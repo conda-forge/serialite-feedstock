@@ -1,12 +1,13 @@
 {% set name = "serialite" %}
 {% set version = "0.3.4" %}
+{% set python_min = "3.10" %}  # Remove when conda-forge drops support for Python 3.9
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
   sha256: 4d2a7c67aaccb077210f0e7d7352db19cdd7b39358c1d06891db0b56139fe17d
 
 build:
