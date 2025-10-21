@@ -1,5 +1,5 @@
 {% set name = "serialite" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 {% set python_min = "3.10" %}  # Remove when conda-forge drops support for Python 3.9
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
-  sha256: ca593827deb94132eb8200e0215353c8530952ea9c7163be2fd02daa179efe8e
+  sha256: b2e97caa5832325703950d0afbedbc1cddd681ae4d5db4be88ca87dc04c7d8ce
 
 build:
   noarch: python
