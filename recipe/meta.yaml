@@ -1,6 +1,6 @@
 {% set name = "serialite" %}
-{% set version = "0.3.5" %}
-{% set python_min = "3.10" %}  # Remove when conda-forge drops support for Python 3.9
+{% set version = "0.3.7" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
-  sha256: ca593827deb94132eb8200e0215353c8530952ea9c7163be2fd02daa179efe8e
+  sha256: c3ea53316a07c3a7bed1f3b04604ddf3440c9c253cb4a987f82457c21b2773f2
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - uv-build >=0.8,<0.9
     - pip
   run:
     - python >={{ python_min }},<4.0.0
@@ -27,7 +27,7 @@ requirements:
     - fastapi >=0.100.0,<0.111.0
     - pydantic >=1.10.0,<2.0.0
     - ordered-set >=4.1.0,<5.0.0
-    - numpy >=1.25.0,<2.0.0
+    - numpy >=1.25.0,<3.0.0
 
 test:
   requires:
