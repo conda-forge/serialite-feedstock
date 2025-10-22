@@ -1,6 +1,6 @@
 {% set name = "serialite" %}
 {% set version = "0.3.7" %}
-{% set python_min = "3.10" %}  # Remove when conda-forge drops support for Python 3.9
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.0.0
+    - uv-build >=0.8,<0.9
     - pip
   run:
     - python >={{ python_min }},<4.0.0
@@ -27,7 +27,7 @@ requirements:
     - fastapi >=0.100.0,<0.111.0
     - pydantic >=1.10.0,<2.0.0
     - ordered-set >=4.1.0,<5.0.0
-    - numpy >=1.25.0,<2.0.0
+    - numpy >=1.25.0,<3.0.0
 
 test:
   requires:
