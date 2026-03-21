@@ -1,5 +1,5 @@
 {% set name = "serialite" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
-  sha256: c54c4992aa8e8ded15a7eea465871f44847e532e97dce337057207dee1b9e6ba
+  sha256: 5c4e73c7325584975f54334a6a57664e66cdebbe2b3b3406cd64fe6a9c289415
 
 build:
   noarch: python
