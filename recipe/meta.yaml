@@ -1,5 +1,5 @@
 {% set name = "serialite" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
-  sha256: fa566f3df6ced591d1e60afcdf031e04d56331b9aabaab4723f5a8c6eedcbe3b
+  sha256: 9c2a1fc904dc30d78f0e8c93a1d35b6a0cacaef3bb6f718d825cf5a9208bdad4
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }},<4.0.0
     - returns >=0.20,<0.27
   run_constrained:
-    - fastapi >=0.121.0,<0.136.0
+    - fastapi >=0.121.0,<0.140.0
     - pydantic >=2.12.0,<3.0.0
     - ordered-set >=4.1.0,<5.0.0
     - numpy >=1.25.0,<3.0.0
