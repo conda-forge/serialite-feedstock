@@ -1,5 +1,5 @@
 {% set name = "serialite" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
-  sha256: 06059e4aa1313cf98acbe057ce3658ccdee379541804c333413a5fab2ed15578
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/serialite-{{ version }}.tar.gz
+  sha256: bc34d6453f41e7aaa4f3f6460eea2739273a1da40a38e30890b06e4c5c76cf2c
 
 build:
   noarch: python
@@ -18,13 +18,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv-build >=0.9,<0.10
+    - uv-build >=0.13,<0.14
     - pip
   run:
     - python >={{ python_min }},<4.0.0
-    - returns >=0.20,<0.27
+    - returns >=0.20,<0.31
   run_constrained:
-    - fastapi >=0.121.0,<0.140.0
+    - fastapi >=0.121.0,<0.163.0
     - pydantic >=2.12.0,<3.0.0
     - ordered-set >=4.1.0,<5.0.0
     - numpy >=1.25.0,<3.0.0
